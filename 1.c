@@ -2,34 +2,34 @@
 
 int main() {
     
-    char lines[5][40] = {"/italy_animals.txt", "Shpioniro Golubiro", "Tung Tung Tung Sahur", "Brr Brr Patapim", "Bobrito Bandito"};
+    char zhivotnie[5][40] = {"/italy_animals.txt", "Shpioniro Golubiro", "Tung Tung Tung Sahur", "Brr Brr Patapim", "Bobrito Bandito"};
 
-    printf("Имя файла: %s\n", lines[0]);
+    printf("Имя файла: %s\n", zhivotnie[0]);
 
-    char content[100];
+    char pipyau[100];
     int index = 0;
     for (int i = 1; i < 5; i++) 
     {
         int j = 0;
-        while (lines[i][j] != '\0') 
+        while (zhivotnie[i][j] != '\0') 
         {
-            content[index] = lines[i][j];
+            pipyau[index] = zhivotnie[i][j];
             index++;
             j++;
         }
         
-        content[index] = '\n'; 
+        pipyau[index] = '\n'; 
         index++;
     }
     
-    content[index] = '\0'; 
-    printf("\nСодержимое файла:\n%s", content);
+    pipyau[index] = '\0'; 
+    printf("\nСодержимое файла:\n%s", pipyau);
 
     char target[] = "Shpioniro";
     int contentLength = 0;
     int targetLength = 0;
 
-    while (content[contentLength] != '\0') 
+    while (pipyau[contentLength] != '\0') 
     {
         contentLength++;
     }
@@ -46,7 +46,7 @@ int main() {
         int match = 1;
         for (int j = 0; j < targetLength; j++) 
         {
-            if (content[i + j] != target[j]) 
+            if (pipyau[i + j] != target[j]) 
             {
                 match = 0;
                 break;
